@@ -1,0 +1,35 @@
+
+<div class="container">
+
+<h2>Records</h2>
+<div class="header-container">
+
+  <div class="search-container">
+    <input type="email" [(ngModel)]="searchTerm" (input)="search()" placeholder="Enter email address">
+  </div>
+  <div class="button-container">
+    <button [routerLink]="'/create'" class="ui-button ui-button-primary">Create</button>
+  </div>
+</div>
+
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let record of filteredRecords; let i = index">
+    <td>{{ record.name }}</td>
+    <td>{{ record.email }}</td>
+    <td>{{ record.phone }}</td>
+    <td>
+      <button (click)="deleteRecord(i)" class="ui-button ui-button-danger">Delete</button>
+      <button [routerLink]="['/details', i]" class="ui-button ui-button-secondary">Details</button>
+    </td>
+  </tr>
+</table>
+
+</div>

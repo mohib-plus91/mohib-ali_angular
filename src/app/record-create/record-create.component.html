@@ -1,0 +1,18 @@
+<div class="form-container">
+  <h2>Create New Record</h2>
+  <form (submit)="createRecord()">
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="newRecord.name" name="name" required>
+    <br>
+    <label>Email:</label>
+    <input type="email" [(ngModel)]="newRecord.email" name="email" required>
+    <br>
+    <label>Phone:</label>
+    <input type="text" [(ngModel)]="newRecord.phone" name="phone" required>
+    <br>
+    <label>Address:</label>
+    <input type="text" [(ngModel)]="newRecord.address" name="address" required>
+    <br>
+    <button type="submit">Create</button>
+  </form>
+</div>

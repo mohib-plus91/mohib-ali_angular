@@ -1,0 +1,8 @@
+<div class="record-details-container" *ngIf="record">
+  <h2>Record Details</h2>
+  <p><strong>Name:</strong> {{ record.name }}</p>
+  <p><strong>Email:</strong> {{ record.email }}</p>
+  <p><strong>Phone:</strong> {{ record.phone }}</p>
+  <p><strong>Address:</strong> {{ record.address }}</p>
+  <button (click)="goBack()" class="ui-button ui-button-primary">Go Back</button>
+</div>
